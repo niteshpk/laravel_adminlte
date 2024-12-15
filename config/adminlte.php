@@ -320,12 +320,33 @@ return [
             'url' => 'admin/blog',
             'can' => 'manage-blog',
         ],
+        ['header' => 'admin_settings'],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
+            'text' => 'category_management',
+            'url' => 'admin/categories',
+            'icon' => 'fas fa-fw fa-th',
+            // 'label' => 4,
+            // 'label_color' => 'success',
+        ],
+        [
+            'text' => 'product_management',
+            'url' => 'admin/products',
+            'icon' => 'fas fa-fw fa-gift',
+        ],
+        [
+            'text' => 'user_management',
+            'url' => 'admin/users',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'ads_management',
+            'url' => 'admin/ads',
+            'icon' => 'far fa-fw fa-image',
+        ],
+        [
+            'text' => 'order_management',
+            'url' => 'admin/orders',
+            'icon' => 'fas fa-fw fa-truck',
         ],
         ['header' => 'account_settings'],
         [

@@ -16,4 +16,10 @@ return [
     'important' => 'Important',
     'warning' => 'Warning',
     'information' => 'Information',
+    'admin_settings' => 'ADMIN SETTINGS',
+    'product_management' => 'Product Management',
+    'user_management' => 'User Management',
+    'ads_management' => 'Ads Management',
+    'order_management' => 'Order Management',
+    'category_management' => 'Category Management',
 ];
