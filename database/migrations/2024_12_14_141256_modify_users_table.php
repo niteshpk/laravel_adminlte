@@ -12,7 +12,6 @@ return new class extends Migration {
     {
         Schema::table('users', function (Blueprint $table) {
             $table->renameColumn('id', 'user_id');
-            $table->boolean('isDeliveryAgent')->default(false)->after('password');
         });
     }
 
@@ -23,7 +22,6 @@ return new class extends Migration {
     {
         Schema::table('users', function (Blueprint $table) {
             $table->renameColumn('user_id', 'id');
-            $table->dropColumn('isDeliveryAgent');
         });
     }
 };

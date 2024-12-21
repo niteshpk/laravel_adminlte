@@ -18,7 +18,6 @@ class JWTAuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'isDeliveryAgent' => 'required|boolean',
         ]);
 
         if ($validator->fails()) {
@@ -34,7 +33,6 @@ class JWTAuthController extends Controller
         $user = User::create([
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'isDeliveryAgent' => $request->get('isDeliveryAgent'),
             'password' => Hash::make($request->get('password')),
         ]);
 
@@ -69,6 +67,7 @@ class JWTAuthController extends Controller
                 "user" => $user
             ]);
         } catch (JWTException $e) {
+            dd($e);
             return $this->errorResponse(['errorMessage' => 'Could not create token'], 500);
         }
     }
